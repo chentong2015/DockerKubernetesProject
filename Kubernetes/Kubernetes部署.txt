@@ -1,0 +1,8 @@
+Kubernetes, also known as K8s, an open source system
+for automating deployment, scaling, and management of containerized applications.
+
+容器化应用程序的部署和管理
+分布式容器集群操作平台，可以轻松地完成部署、调度、扩容等操作
+用于管理云平台中多个主机上的容器化的应用，目标是让部署容器化的应用简单并且高效
+
+https://kubernetes.io/zh-cn/docs/setup/
