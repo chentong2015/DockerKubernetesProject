@@ -1,6 +1,0 @@
-Debug java application inside container
-1. 运行容器时启动jar包应用程序，设置jvm远程调试的参数
-   > java -jar -agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=*:8000
-2. 使用IDEA进行源码的debug进行断点调试
-   Host: 容器暴露的可访问的外部host地址
-   Remote JVM: 配置的参数必须和容器中的参数一致

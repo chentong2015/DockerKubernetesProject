@@ -1,0 +1,14 @@
+Portus: open source Docker Registry
+企业级Docker Image镜像托管平台, 集成公司内部项目, 一键下载和部署
+http://port.us.org/docs/first-steps.html
+
+从指定Registry平台获取镜像下载
+> time curl -sS http://portus.jenkins-deploy.xxxx.net:9000/v1/tags-manifests | head -3
+  {"name":"continuity/cty-dwh-db-oracle:1.0.2.0.p20","digest":"sha256:2d4386adaxxx"}
+  {"name":"continuity/cty-dwh-db-oracle:1.0.2.0.p18","digest":"sha256:55b9fbd79exxx"}
+  {"name":"continuity/cty-dwh-db-oracle:1.0.1.0.p16","digest":"sha256:f8d1afxxxx"}
+  5.81 seconds
+
+> time curl -sS http://portus.jenkins-deploy.xxxx.net:9000/v1/tags-manifests | wc -l
+  7.60 seconds
+  32007

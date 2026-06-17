@@ -1,0 +1,35 @@
+TODO. 容器化过程: 将应用程序打包成容器，然后在容器中运行应用程序
+1. 创建dockerfile，定义docker构建应用程序镜像时所需的步骤和配置
+2. 使用dockerfile来构建镜像
+3. 使用镜像来创建出容器并运行
+
+> docker build -t image-name .  根据当前目录下Dockerfile文件来构建镜像，设置镜像的tag名称
+> docker build -t image-name:version .  设置镜像的版本号
+> docker image ls 查看所有的镜像
+> docker images   显示本地所有的镜像/或者使用Docker Desktop查看
+  REPOSITORY  TAG      IMAGE_ID    CREATED    SIZE
+  image_name  LATEST   65cgs...
+> docker image history image-name 查看镜像的构建历史
+> docker image rm image-name
+> docker image rm -f image-name
+> docker cp xxx.jar container_name:/data/env 复制指定文件到容器中指定路径
+
+> docker run image_name 使用指定的镜像来运行容器
+> docker run --name container_name image-name 定义启动容器的名称
+> docker run -dp 127.0.0.1:3000:3000 image-name 将容器的端口暴露给主机
+> docker run --publish 8080:8080 image-name
+> docker run -it --rm --name image-name java-docker ./mvnw test 直接运行容器中脚本
+
+> docker build -t image-name --target test .  以指定的stage来构建镜像
+> docker run -it --rm --name springboot-test image-name 创建并运行容器，执行的stage的配置
+
+> docker ps 显示正在运行的容器
+  CONTAINER ID   IMAGE             COMMAND     CREATED  STATUS  PORTS   NAMES
+  01aa81c69c5d   getting-started   "docker-“
+
+> docker stop [container_id] 关闭正在运行的容器
+> docker rm [container-id] 移除指定的容器
+> docker rm -f [container-id] 强制移除指定的容器
+
+设置-d启动参数: -d, --detach
+Run container in background and print container ID

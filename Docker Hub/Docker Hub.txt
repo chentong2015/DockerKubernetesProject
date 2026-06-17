@@ -1,26 +1,22 @@
 Docker首先会在本地查找镜像，反之从Docker Hub查找并下载
-
-TODO. Pushing images 标记本地存在的镜像以指向另一个名称
 You can push a new image to this repository using the CLI:
 Make sure to replace tag-name with your desired image repository tag.
+
 > docker tag local-image:tag-name new-repo:tag-name
 > docker push new-repo:tag-name
 > docker push ctong2016/getting-started-repo:tag-name
 
-% docker tag getting-started ctong2016/getting-started-repo
-% docker images
+> docker tag getting-started ctong2016/getting-started-repo
+> docker images
   REPOSITORY                       TAG       IMAGE ID       CREATED      SIZE
   ctong2016/getting-started-repo   latest    a09ed0db9dff   6 days ago   221MB
   getting-started                  latest    a09ed0db9dff   6 days ago   221MB
 
-% docker push ctong2016/getting-started-repo
+> docker push ctong2016/getting-started-repo
   Using default tag: latest
   The push refers to repository [docker.io/ctong2016/getting-started-repo]
   0ff27f093a6e: Pushed ...
   latest: digest: sha256:2d450a52448a75f4ba107... size: 1787
 
-$ docker pull ctong2016/getting-started-repo
-$ docker run -dp 0.0.0.0:3000:3000 ctong2016/getting-started 将容器的port暴露给外部访问
-
-TODO. Play with Docker
-https://labs.play-with-docker.com/
+> docker pull ctong2016/getting-started-repo
+> docker run -dp 0.0.0.0:3000:3000 ctong2016/getting-started 将容器的port暴露给外部访问

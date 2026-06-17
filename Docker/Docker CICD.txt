@@ -1,0 +1,5 @@
+TODO. Docker自动化部署以及测试
+1. 通过交换模式进入容器中，启动服务，自动化测试，执行特定的脚本
+2. 通过非交换模式执行容器中复制的文件，测试功能
+
+https://docs.docker.com/language/java/configure-ci-cd/

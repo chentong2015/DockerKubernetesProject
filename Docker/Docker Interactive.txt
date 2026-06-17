@@ -1,6 +1,3 @@
-TODO. Docker自动化部署以及测试
-1. 通过交换模式进入容器中，启动服务，自动化测试，执行特定的脚本
-2. 通过非交换模式执行容器中复制的文件，测试功能
 
 TODO. 交换模式进入容器, 使用特定的Shell Command命令
 1. 使用容器名称(启动时定义)或者容器ID来执行交互模式
@@ -13,7 +10,5 @@ TODO. 交换模式进入容器, 使用特定的Shell Command命令
   > exit
 
 > docker exec -it mongo mongosh 使用特定数据库Shell
-
 > docker exec -it redis_server redis-cli 以cli命令行接口进行交互
-
 > docker exec [container_id] sh -c './hello.sh'
